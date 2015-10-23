@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md1 col-md-10" style="display: block;">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed"
+                                data-toggle="collapse"
+                                data-target="#navbar" aria-expanded="false"
+                                aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img
+                                src="images/tw_logo.png" width="240"></a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle"
+                                   data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">Main
+                                    Menu <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Storage</a>
+                                    </li>
+                                    <li role="separator" class="divider">
+                                    </li>
+                                    <li>
+                                        <a href="#">Sign Out</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="col-md1" style="display: block;">
+        </div>
+    </div>
+    <!-- start of content header -->
+    <div class="row">
+        <div class="col-md1 col-md-1" style="display: block;">
+        </div>
+        <div class="col-md1 col-md-10" style="display: block;">
+            <div class="progress">
+                <div class="progress-bar" style="width: 16%;">
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="stepHeader">Import: Other</span>
+                    <span id="stepCount" class="pull-right stepOfStep">File 1 of 3</span>
+                </div>
+                <div class="panel-body" id="instructions">
+                    In your CAD software, export a Centroid file in CSV format.
+                    It should
+                    include columns for Reference Designator, X Position, Y
+                    Position, Rotation,
+                    Part Name and Value. Drag the file to the drop target when
+                    it's ready.
+                    <div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                        <div>
+                            Tip: If you already have all your files ready you
+                            can drag them all at
+                            once instead of one at a time.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md1 col-md-1" style="display: block;">
+        </div>
+    </div>
+    <!-- content rows here -->
+    <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md4 col-md-4" style="display: block;">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    1. Centroids.csv
+                    <span id="check_1" class="pull-right"
+                          aria-hidden="true"></span>
+                </li>
+                <li class="list-group-item">
+                    2. Solder Paste.gtp
+                    <span id="check_2" class="pull-right"
+                          aria-hidden="true"></span>
+                </li>
+                <li class="list-group-item">
+                    3. Solder Paste.gbp
+                    <span id="check_3" class="pull-right"
+                          aria-hidden="true"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md1 col-md-1" style="display: block;">
+        </div>
+        <div class="col-md-5">
+            <img src="images/drag_files_here.png" ondrop="drop(event)"
+                 ondragover="allowDrop(event)">
+        </div>
+        <div class="col-md-1">
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
