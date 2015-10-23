@@ -5,3 +5,13 @@
 .stepOfStep {
   font-size: 2em;
 }
+
+.dropzone {
+    border: 2px dashed #0087F7;
+    border-radius: 5px;
+    background: #efefef;
+}
+
+.dropzone .dz-message {
+    font-size: 1.25em;
+}

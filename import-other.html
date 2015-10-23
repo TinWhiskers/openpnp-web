@@ -10,6 +10,7 @@
     <meta name="author" content="">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="css/dropzone.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 </head>
 
@@ -78,20 +79,6 @@
                     <span id="stepCount" class="pull-right stepOfStep">File 1 of 3</span>
                 </div>
                 <div class="panel-body" id="instructions">
-                    In your CAD software, export a Centroid file in CSV format.
-                    It should
-                    include columns for Reference Designator, X Position, Y
-                    Position, Rotation,
-                    Part Name and Value. Drag the file to the drop target when
-                    it's ready.
-                    <div>
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-                        <div>
-                            Tip: If you already have all your files ready you
-                            can drag them all at
-                            once instead of one at a time.
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -106,17 +93,17 @@
             <ul class="list-group">
                 <li class="list-group-item">
                     1. Centroids.csv
-                    <span id="check_1" class="pull-right"
+                    <span id="check_csv" class="pull-right"
                           aria-hidden="true"></span>
                 </li>
                 <li class="list-group-item">
                     2. Solder Paste.gtp
-                    <span id="check_2" class="pull-right"
+                    <span id="check_gtp" class="pull-right"
                           aria-hidden="true"></span>
                 </li>
                 <li class="list-group-item">
                     3. Solder Paste.gbp
-                    <span id="check_3" class="pull-right"
+                    <span id="check_gbp" class="pull-right"
                           aria-hidden="true"></span>
                 </li>
             </ul>
@@ -124,8 +111,11 @@
         <div class="col-md1 col-md-1" style="display: block;">
         </div>
         <div class="col-md-5">
-            <img src="images/drag_files_here.png" ondrop="drop(event)"
-                 ondragover="allowDrop(event)">
+            <form action="." class="dropzone" id="dropzone">
+                <div class="dz-message">
+                    Drop files here or click to upload.
+                </div>
+            </form>
         </div>
         <div class="col-md-1">
         </div>
@@ -133,6 +123,10 @@
 </div>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/dropzone.js"></script>
 <script src="js/main.js"></script>
+<script>
+    showInstructions();
+</script>
 </body>
 </html>
